@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <title>php </title>
+    <script>
+
+
+
+    function check()
+	{
+        var a,b,con;
+        con=document.getElementById("chkcond").checked;
+        if(con==false)
+        {
+            alert("please condition");
+        }
+		  else
+		  { 
+            a=document.getElementById("txtnm").value;
+             
+            b=document.getElementById("txtpass").value;
+          }
+            if(a==""||b=="")
+            {
+                alert("enter all details")
+            }
+	
+    if(b.length<8)
+			 {
+			   document.getElementById('ppass').innerHTML='enter minimum 8 digit password';
+			 }
+		
+	}
+</script>
+
+  </head>
+  <body>
+        <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+    <center>
+        <div class="container">
+        <form method="post" action="index.php">
+            <div class="mb-3 mt-3">
+            <table border="3" align="center">
+                <p id="txt">
+                <tr>
+                    <td> 
+                        
+                   Enter name 
+                   <input type="textbox" name="txtnm" id="txtnm" class="form-control "  placeholder="Enter the name"></td>
+                </tr>
+            </div>
+        </p>
+            <div class="mb-30">
+                <tr>
+                    <td>
+                        Enter password <input type="password" name="txtpass" id="txtpass"class="form-control"  placeholder="Enter the password"><div id="ppass" style="color:red;" ></div>
+                    
+                    </td>
+                </tr>
+            </div>
+    <div class="mb-3">
+                <tr>
+                    <td>
+                        <input type="submit" value="login" name="sub" id="btn1"  class="btn btn-primary" onclick="check();">
+                    </td>
+                </tr>
+            </div>
+            <div class="mb-3">
+                <tr>
+                    <td>
+                        <input type="reset" name="reset">
+                    </td>
+                </tr>
+                <tr><td>
+	<input type="checkbox" name="cond" id="chkcond">i agree tems and condion
+   </td></tr>
+            </div>
+    
+    </center>
+    </table>
+    </form>
+</div>
+  </body>
+</html>
